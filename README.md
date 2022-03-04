@@ -1,1 +1,5 @@
-# Dictation-web-site
+## Dictation-web-site
+
+``
+npm install && npm start
+``
