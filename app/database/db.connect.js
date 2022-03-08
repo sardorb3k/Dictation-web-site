@@ -3,7 +3,7 @@ const config = require("../../config.json").database
 
 module.exports = mysql.createPool({
     host: config.host,
-    user: config.username,
+    user: config.user,
     password: config.password,
     database: config.database,
     waitForConnections: true,

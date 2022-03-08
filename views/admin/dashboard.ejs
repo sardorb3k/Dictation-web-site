@@ -1,0 +1,111 @@
+<%- include('includes/head.ejs') %>
+
+<body class="nk-body npc-covid has-sidebar has-sidebar-short ui-clean ui-rounder">
+<div class="nk-app-root">
+    <!-- main @s -->
+    <div class="nk-main ">
+        <!-- sidebar @s -->
+        <%- include('includes/sidebar.ejs') %>
+        <!-- sidebar @e -->
+        <!-- wrap @s -->
+        <div class="nk-wrap ">
+            <!-- main header @s -->
+            <div class="nk-header nk-header-fluid nk-header-fixed nk-header-onlymobile is-light">
+                <div class="container-fluid">
+                    <div class="nk-header-wrap">
+                        <div class="nk-header-brand">
+                            <a href="/admin/home" class="logo-link">
+                                <img class="logo-img" src="./assets/images/logo.png" srcset="./assets/images/logo.png 2x" alt="logo">
+                            </a>
+                        </div>
+                        <div class="nk-menu-trigger ml-auto mr-n1">
+                            <a href="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="sidebarMenu"><em class="icon ni ni-menu"></em></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- main header @e -->
+            <!-- content @s -->
+            <div class="nk-content ">
+                <div class="container-fluid">
+                    <div class="nk-content-body">
+                        <div class="nk-block-head nk-block-head-sm">
+                            <div class="nk-block-between flex-wrap g-1 align-start">
+                                <div class="nk-block-head-content">
+                                    <h5 class="nk-block-title">Boshqaruv paneli</h5>
+                                </div>
+                                <div class="nk-block-head-content">
+                                    <p class="note-text">Powered by Team Cyclone</p>
+                                </div>
+                            </div>
+                        </div><!-- .nk-block-head -->
+                        <div class="nk-block">
+                            <div class="row g-gs">
+                                <div class="col-xl-12 col-md-12">
+                                    <div class="card card-bordered card-full">
+                                        <div class="card-inner mb-n2">
+                                            <div class="card-title-group">
+                                                <div class="card-title mb-0">
+                                                    <h6 class="title">Top yuqori natija qayd etgan foydalanuvchilar</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="nk-tb-list is-medium nk-cov-wg5-table">
+                                            <div class="nk-tb-item nk-tb-head">
+                                                <div class="nk-tb-col">Ism Familya</div>
+                                                <div class="nk-tb-col text-right">Diktant nomi</div>
+                                                <div class="nk-tb-col text-right">Natija</div>
+                                            </div>
+                                            <div class="nk-tb-item">
+<!--                                                <% for (let i=0; i<arr.length; i++) { %>-->
+                                                <div class="nk-tb-col">
+                                                    <div class="tb-country">
+                                                        <div class="name"><%= arr[i].fullname %></div>
+                                                    </div>
+                                                </div>
+                                                <div class="nk-tb-col text-right">
+                                                    <div class="tb-lead tb-amount"><%= arr[i].header %></div>
+                                                </div>
+                                                <div class="nk-tb-col text-right">
+                                                    <div class="tb-lead tb-amount"><%= arr[i].score %></div>
+                                                </div>
+                                                <% } %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- .col -->
+                            </div><!-- .row -->
+                        </div><!-- .nk-block -->
+                    </div>
+                </div>
+            </div>
+            <!-- content @e -->
+            <!-- footer @s -->
+            <div class="nk-footer d-md-none">
+                <div class="container-fluid">
+                    <div class="nk-footer-wrap gy-1 gx-4">
+                        <div class="nk-footer-links">
+                            <ul class="nav nav-sm">
+                                <li class="nav-item"><a class="nav-link" href="/admin/logout">Logout</a></li>
+                            </ul>
+                        </div>
+                        <div class="nk-footer-copyright"> Cyclone
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer @e -->
+        </div>
+        <!-- wrap @e -->
+    </div>
+    <!-- main @e -->
+</div>
+<!-- app-root @e -->
+<!-- JavaScript -->
+<script src="./assets/js/bundle.js?ver=2.2.0"></script>
+<script src="./assets/js/scripts.js?ver=2.2.0"></script>
+<script src="assets/js/libs/jqvmap.js?ver=2.2.0"></script>
+<script src="assets/js/chart-covid.js?ver=2.2.0"></script>
+</body>
+
+</html>

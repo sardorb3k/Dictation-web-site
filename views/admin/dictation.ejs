@@ -1,0 +1,258 @@
+<%- include('includes/head.ejs') %>
+
+<body class="nk-body npc-covid has-sidebar has-sidebar-short ui-clean ui-rounder">
+<div class="nk-app-root">
+    <!-- main @s -->
+    <div class="nk-main ">
+        <!-- sidebar @s -->
+        <%- include('includes/sidebar.ejs') %>
+        <!-- sidebar @e -->
+        <!-- wrap @s -->
+        <div class="nk-wrap ">
+            <!-- main header @s -->
+            <div class="nk-header nk-header-fluid nk-header-fixed nk-header-onlymobile is-light">
+                <div class="container-fluid">
+                    <div class="nk-header-wrap">
+                        <div class="nk-header-brand">
+                            <a href="/admin" class="logo-link">
+                                <img class="logo-img" src="./assets/images/logo.png"
+                                     srcset="./assets/images/logo.png 2x" alt="logo">
+                            </a>
+                        </div>
+                        <div class="nk-menu-trigger ml-auto mr-n1">
+                            <a href="/admin" class="nk-nav-toggle nk-quick-nav-icon" data-target="sidebarMenu"><em
+                                        class="icon ni ni-menu"></em></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- main header @e -->
+            <!-- content @s -->
+            <div class="nk-content ">
+                <div class="container-fluid">
+                    <div class="nk-content-body">
+
+                        <div class="nk-content-wrap">
+                            <div class="nk-block-head">
+                                <div class="nk-block-between g-3">
+                                    <div class="nk-block-head-content">
+                                        <h3 class="nk-block-title page-title">Diktantlar</h3>
+                                        <div class="nk-block-des text-soft">
+                                            <p>Ma;lumotlar bazasida <%= arr.length %> ta diktant matni mavjud.</p>
+                                        </div>
+                                    </div><!-- .nk-block-head-content -->
+                                    <div class="nk-block-head-content">
+                                        <ul class="nk-block-tools g-3">
+                                            <li>
+                                                <div class="drodown">
+                                                    <a class="dropdown-toggle btn btn-icon btn-primary"
+                                                       href="#create" data-toggle="modal"><em
+                                                                class="icon ni ni-plus"></em></a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div><!-- .nk-block-head-content -->
+                                </div><!-- .nk-block-between -->
+                            </div><!-- .nk-block-head -->
+                            <div class="nk-block">
+                                <div class="card card-bordered card-stretch">
+                                    <div class="card-inner-group">
+                                        <div class="card-inner">
+                                            <div class="card-title-group">
+                                                <div class="card-title">
+                                                    <h5 class="title">Diktantlar ro'yxati</h5>
+                                                </div>
+                                            </div><!-- .card-title-group -->
+                                        </div><!-- .card-inner -->
+                                        <div class="card-inner p-0">
+                                            <table class="table table-orders">
+                                                <thead class="tb-odr-head">
+                                                <tr class="tb-odr-item">
+                                                    <th class="tb-odr-info">
+                                                        <span class="tb-odr-id">T/r</span>
+                                                    </th>
+                                                    <th class="tb-odr-info">
+                                                        <span class="tb-odr-id">Sarlavha</span>
+                                                    </th>
+                                                    <th class="tb-odr-info">
+                                                        <span class="tb-odr-id">Avtor</span>
+                                                    </th>
+                                                    <th class="tb-odr-action">O'chirish</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody class="tb-odr-body">
+                                                <% for(let i=0;i<arr.length;i++) { %>
+                                                <tr id="tab-<%= i %>" class="tb-odr-item">
+                                                    <td style="display: none"><%= arr[i].id %></td>
+                                                    <td class="tb-odr-info"><%= i+1 %></td>
+                                                    <td class="tb-odr-info">
+                                                                <span class="tb-odr-id"><a
+                                                                            href="#create" onclick="editFunForm('<%= i %>')" data-toggle="modal"><%= arr[i].header %></a>
+                                                                </span>
+                                                    </td>
+                                                    <td class="tb-odr-info">
+                                                                <span class="tb-odr-id">
+                                                                    <%= arr[i].author %>
+                                                                </span>
+                                                    </td>
+                                                    <td style="display: none"><%= arr[i].text %> </td>
+                                                    <td class="tb-odr-action">
+                                                        <div class="tb-odr-btns d-none d-sm-inline">
+                                                            <a data-toggle="modal" onclick="deleteDic('<%= arr[i].id %>')"
+                                                               class="btn btn-dim btn-sm btn-primary">Delete</a>
+                                                        </div>
+                                                        <a data-toggle="modal" onclick="deleteDic('<%= arr[i].id %>')"
+                                                           class="btn btn-pd-auto d-sm-none"><em
+                                                                    class="icon ni ni-delete"></em></a>
+                                                    </td>
+                                                </tr><!-- .tb-odr-item -->
+                                                <% } %>
+                                                </tbody>
+                                            </table>
+                                        </div><!-- .card-inner -->
+<!--                                        <div class="card-inner">-->
+<!--                                            <ul class="pagination justify-content-center justify-content-md-start">-->
+<!--                                                <li class="page-item"><a class="page-link" href="#">Prev</a></li>-->
+<!--                                                <li class="page-item"><a class="page-link" href="#">1</a></li>-->
+<!--                                                <li class="page-item"><a class="page-link" href="#">2</a></li>-->
+<!--                                                <li class="page-item"><span class="page-link"><em-->
+<!--                                                                class="icon ni ni-more-h"></em></span></li>-->
+<!--                                                <li class="page-item"><a class="page-link" href="#">6</a></li>-->
+<!--                                                <li class="page-item"><a class="page-link" href="#">7</a></li>-->
+<!--                                                <li class="page-item"><a class="page-link" href="#">Next</a></li>-->
+<!--                                            </ul>&lt;!&ndash; .pagination &ndash;&gt;-->
+<!--                                        </div>&lt;!&ndash; .card-inner &ndash;&gt;-->
+                                    </div><!-- .card-inner-group -->
+                                </div><!-- .card -->
+                            </div><!-- .nk-block -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content @e -->
+            <!-- footer @s -->
+            <div class="nk-footer d-md-none">
+                <div class="container-fluid">
+                    <div class="nk-footer-wrap gy-1 gx-4">
+                        <div class="nk-footer-links">
+                            <ul class="nav nav-sm">
+                                <li class="nav-item"><a class="nav-link" href="/admin/logout">Logout</a></li>
+                            </ul>
+                        </div>
+                        <div class="nk-footer-copyright"> Cyclone
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer @e -->
+        </div>
+        <!-- wrap @e -->
+    </div>
+    <!-- main @e -->
+</div>
+<!-- app-root @e -->
+
+
+
+<!-- Modal Content Code -->
+<div class="modal fade" tabindex="-1" id="create">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <a href="#" onclick="clearItem()" class="close" data-dismiss="modal" aria-label="Close">
+                <em class="icon ni ni-cross"></em>
+            </a>
+            <div class="modal-header">
+                <h5 class="modal-title">Diktant</h5>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="/admin/dictation" enctype="multipart/form-data">
+                    <input type="hidden" name="id" id="id" value="0">
+                    <div class="form-group">
+                        <label class="form-label" for="header">Sarlavha</label>
+                        <div class="form-control-wrap">
+                            <input name="header" type="text" class="form-control" id="header">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="author">Muallif</label>
+                        <div class="form-control-wrap">
+                            <input name="author" type="text" class="form-control" id="author">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="text">Matn</label>
+                        <div class="form-control-wrap">
+                            <textarea name="txt" class="form-control" id="text"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="lfile">Audiofayl</label>
+                        <div class="form-control-wrap">
+                            <div class="custom-file">
+                                <input name="lfile" type="file" class="custom-file-input" id="lfile">
+                                <label class="custom-file-label" for="lfile">Tanlash</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-lg btn-secondary" onclick="clearItem()" data-dismiss="modal" >Yopish</button>
+                        <button type="submit" class="btn btn-lg btn-primary">Saqlash</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer bg-light">
+                <span class="sub-text">Powered by Team Cyclone</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script src="./assets/js/bundle.js?ver=2.2.0"></script>
+<script src="./assets/js/scripts.js?ver=2.2.0"></script>
+<script src="assets/js/libs/jqvmap.js?ver=2.2.0"></script>
+<script src="assets/js/chart-covid.js?ver=2.2.0"></script>
+</body>
+
+</html>
+
+<script>
+    let editFunForm = (data) => {
+        let frm = document.getElementById("tab-" + data);
+        document.getElementById("id").value = frm.children[0].innerText
+        document.getElementById("header").value = frm.children[2].innerText
+        document.getElementById("author").value = frm.children[3].innerText
+        document.getElementById("text").value = frm.children[4].innerText
+    }
+</script>
+
+<script>
+    let clearItem = () => {
+        document.getElementById("id").value = 0
+        document.getElementById("header").value = ""
+        document.getElementById("author").value = ""
+        document.getElementById("text").value = ""
+    }
+</script>
+
+<script>
+    let deleteDic = (data) => {
+        if(confirm("Rostan ham o'chirmoqchimisiz?")){
+            $.ajax({
+                url:`/admin/dictation/${data}`,
+                type:"DELETE",
+                success: (res)=>{
+                    alert("O'chirildi.")
+
+                },
+                error: (err)=>{
+                    console.log(err)
+                }
+            })
+            document.location.reload()
+        }
+        else
+            alert("Bekor qilindi");
+    }
+</script>
+

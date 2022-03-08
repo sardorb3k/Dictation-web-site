@@ -24,6 +24,8 @@ create table Scores(
                        id int primary key auto_increment,
                        uid int,
                        foreign key(uid) references Users(id),
-                       score int
+                       score int,
+                       did int,
+                       foreign key(did) references Dictionary(id)
 )
 
