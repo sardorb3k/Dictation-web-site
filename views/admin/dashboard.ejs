@@ -53,24 +53,20 @@
                                         <div class="nk-tb-list is-medium nk-cov-wg5-table">
                                             <div class="nk-tb-item nk-tb-head">
                                                 <div class="nk-tb-col">Ism Familya</div>
-                                                <div class="nk-tb-col text-right">Diktant nomi</div>
                                                 <div class="nk-tb-col text-right">Natija</div>
                                             </div>
+                                            <% for (let i=0; i<arr.length; i++) { %>
                                             <div class="nk-tb-item">
-<!--                                                <% for (let i=0; i<arr.length; i++) { %>-->
                                                 <div class="nk-tb-col">
                                                     <div class="tb-country">
-                                                        <div class="name"><%= arr[i].fullname %></div>
+                                                        <div class="name"><%= arr[i].uname %></div>
                                                     </div>
-                                                </div>
-                                                <div class="nk-tb-col text-right">
-                                                    <div class="tb-lead tb-amount"><%= arr[i].header %></div>
                                                 </div>
                                                 <div class="nk-tb-col text-right">
                                                     <div class="tb-lead tb-amount"><%= arr[i].score %></div>
                                                 </div>
-                                                <% } %>
                                             </div>
+                                            <% } %>
                                         </div>
                                     </div>
                                 </div><!-- .col -->

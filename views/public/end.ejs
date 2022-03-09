@@ -1,0 +1,28 @@
+<%- include('includes/head.ejs') %>
+    <div class="brand-logo pb-4 text-center">
+        <a href="/" class="logo-link">
+            <img class="logo-light logo-img logo-img-lg" src="./assets/images/logo.png" srcset="./images/logo2x.png 2x"
+                alt="logo">
+        </a>
+    </div>
+    <div class="card card-bordered">
+        <div class="card-inner card-inner-lg">
+            <div class="nk-block-head">
+                <div class="nk-block-head-content">
+                    <h4 style="text-align: center" class="nk-block-title">Siz buni epladingiz!</h4>
+                    <div class="nk-block-des">
+                        <h5 style="text-align: center" id="finalScore"> To'plangan ball: <%= score %></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <form action="/" method="get">
+                    <input type="hidden" name="start" value="true">
+                    <button class="btn btn-lg btn-primary btn-block" id="newTestButton">Orqaga qaytish</button>
+                </form>
+
+            </div>
+            <!-- </form> -->
+        </div>
+    </div>
+    <%- include('includes/footer.ejs') %>
