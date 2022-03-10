@@ -4,7 +4,7 @@
 
     <div class="title">
         <p style="margin: 0 auto;"> <%= dic.header  %>  </p>
-
+        <button class="btn btn-lg btn-primary btn-block" onclick="document.getElementById('form').submit();" style="width: 10px;">Stop</button>
     </div>
 
     <div id="wrapper" style="display: flex;">
@@ -13,12 +13,11 @@
             <p id="testPara"> <%= dic.text %>  </p>
         </div>
 
-        <form method="post" action="/start">
+        <form method="post" action="/start" id="form">
             ​<textarea id="textArea" name="textarea" rows="5" cols="50" onPaste="return false"
                        placeholder="Yozing..."></textarea>
             <input type="hidden" name="id" value="<%= dic.id %>">
             <input type="hidden" name="uname" value="<%= user %>">
-            <button class="btn btn-lg btn-primary btn-block"  style="width: 10px;">Stop</button>
         </form>
 
 

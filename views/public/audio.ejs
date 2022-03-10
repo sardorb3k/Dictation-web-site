@@ -3,15 +3,15 @@
     <div class="title">
         <p style="margin: 0 auto;"> <%= dic.header %> </p>
 
+        <button class="btn btn-lg btn-primary btn-block" onclick="document.getElementById('form').submit();" style="width: 10px;">Stop</button>
     </div>
 
     <div id="wrapper">
-        <form method="post" action="/start">
+        <form method="post" action="/start" id="form">
             ​<textarea id="textArea" name="textarea" style="width: 100%;" rows="5" cols="50" onPaste="return false"
                        placeholder="Yozish..."></textarea>
             <input type="hidden" name="id" value="<%= dic.id %>">
             <input type="hidden" name="uname" value="<%= user %>">
-            <button class="btn btn-lg btn-primary btn-block"  style="width: 10px;">Stop</button>
         </form>
 
 
