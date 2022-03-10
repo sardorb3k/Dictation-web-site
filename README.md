@@ -1,5 +1,5 @@
 ## Dictation web site
 
 ```bash
-=> index.html
+index.html
   ```
