@@ -4,9 +4,9 @@ const { query } = require('../../database/db.fun')
 const app = express()
 
 app.get('/', async (req, res)=>{
-    // let arr = await query('select * from Dictionary')
+    // let arr = await query('')
 
-    res.render('./public/start')
+    res.render('./public/enter')
 })
 
 module.exports = app

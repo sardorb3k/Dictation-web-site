@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700;800&amp;display=swap");
+
+body {
+  font-family: "Prompt", sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  overflow-x:hidden;
+}
+
+.font-weight-bold{
+  font-weight: 600 !important;
+}
+
+.section{
+  padding: 80px 0;
+}  
+
+.container-fluid{
+  width: 85%;
+}
+
+.home-section{
+  background-position: center center;
+  background-size: cover;
+  background-image: url(../images/bg-gradient.svg);
+  padding:180px 0;
+  position: relative;
+}
+
+.main_title h1{
+  line-height: 1.4;
+  font-size: 44px;
+}
+
+.custom-nav{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.img-logo{
+  height: 45px;
+}
+
+.demo-logo{
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.home-img-box {
+  padding: 20px 0 30px 0; 
+  text-align: center;
+}
+
+.home-img-box a {
+  display: block;
+  -webkit-transition: all 400ms ease-in-out;
+  -moz-transition: all 400ms ease-in-out;
+  -o-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+.home-img-box img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 15px 50px rgb(33 37 40 / 6%);
+  position: relative;
+  top: 0;
+}
+
+.home-img-box h5 {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.footer {
+  padding: 30px 0px;
+  background-color: #fff;
+}
+
+.border {
+  height: 4px;
+  width: 60px;
+  border-radius: 5px;
+  margin: 0 auto 30px;
+  background-color: #01bf86;
+}
+
+.title {
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.copyright{
+  font-size:18px;
+  line-height: 1.4;
+}
+
+.btn {
+    padding: 12px 32px;
+    box-shadow: none !important;
+}
+
+.btn-rounded {
+    border-radius: 30px;
+}
+
+.btn-custom {
+    background-color: #36b37e;
+    border: 2px solid #36b37e;
+    color: #fff;
+    transition: all 0.5s;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active,
+.btn-custom.focus,
+.btn-custom:active,
+.btn-custom:focus,
+.btn-custom:hover,
+.open>.dropdown-toggle.btn-custom {
+    background-color: #2f9469;
+    border-color: #2f9469;
+    color: #f3f3f3;
+}
+
+@media (max-width: 768px) {
+  .main_title h1{
+    font-size: 28px;
+  }
+  .home-section{
+    padding: 60px 0;
+  }
+}

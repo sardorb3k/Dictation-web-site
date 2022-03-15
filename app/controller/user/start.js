@@ -8,7 +8,7 @@ function randomIntFromInterval(min, max) { // min and max included
 }
 
 app.get('/', async (req, res)=>{
-    // console.log(req.query.uname);
+    // console.log(req.query.u  name);
     let count = await query('select count(*) as count from Dictionary')
     count = count[0].count
 
@@ -29,7 +29,7 @@ app.get('/', async (req, res)=>{
             dic, user
         })
     else
-        res.redirect('/')
+        res.redirect('/home')
 })
 
 app.post('/' , async (req, res)=>{

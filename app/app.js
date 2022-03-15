@@ -7,7 +7,7 @@ app.use('/admin', require('../app/router/admin/admin'))
 app.use('/', require('../app/router/user/play'))
 
 app.get('*', (req, res)=>{
-    res.redirect('/')
+    res.redirect('/home')
 })
 
 module.exports = app
