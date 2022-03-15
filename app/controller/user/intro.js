@@ -1,7 +1,10 @@
 const express = require('express')
+const app = express()
 const { query } = require('../../database/db.fun')
 
-const app = express()
+app.get('/', (req, res)=>{
+    res.render('./public/enter')
+})
 
 app.post('/', async (req, res)=>{
     const { fname, uname, pwd } = req.body
