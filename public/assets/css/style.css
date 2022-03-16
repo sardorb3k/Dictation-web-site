@@ -1,33 +1,113 @@
-/*
--------------------------------------------------------------------------
-* Template Name    : Rivani - Responsive One Page Multipurpose Template * 
-* Author           : ThemesBoss                                         *
-* Version          : 1.0.0                                              *
-* Created          : Octomber 2020                                      *
-* File Description : Main Css file of the template                      *
-*------------------------------------------------------------------------
-*/
-/***********************
-    1. BASIC           *
-    2. HELPER          *
-    3. NAVBAR          *
-    4. HOME            *
-    5. ABOUT US        *
-    6. SERVICES        *
-    7. CASE            *
-    8. HIT             *
-    9. CTAONE          *
-    10.WORK            *
-    11.PRICE           *
-    12.TEAM            *
-    13.CLIENT          *
-    14.BLOG            *
-    15.SUBCRIBE        *
-    16.CONTACT         *
-    16.FOOTER          *
-    16.RESPONSIVE      *
-    16.DEMO            *
-************************/
+/* By Sardorb3k - https://github.com/sardorb3k/Dictation-web-site */
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background: #fff;
+}
+
+#wrapper {
+	margin: 0 auto;
+	width: 1200px;
+}
+
+#testPara {
+	background: #f5f6fa;
+    padding: 0.75rem;
+    border-radius: 4px;
+}
+
+
+.title {
+	display: flex;
+	text-align: center;
+	padding: 10px;
+	font-family: helvetica;
+	font-size: 25px;
+    background: #fff;
+    color: #000;
+	opacity: 0.8;
+	letter-spacing: 2.5px;
+	font-weight: 100;
+}
+
+#paraContainer {
+	width: 550px;
+	height: 600px;
+	margin: 25px 10px;
+	font-family: helvetica;
+	font-size: 18px;
+	line-height: 1.5;
+	border-radius: 5px;
+	padding: 10px;
+	overflow-y: scroll;
+    background: #fff;
+    padding: 1.25rem;
+}
+#paraContainer::-webkit-scrollbar {
+	display: none;
+  }
+#textArea {
+	margin: 25px 10px;
+	width: 550px;
+	height: 600px;
+	resize:none;
+	font-family: helvetica;
+	font-size: 18px;
+	line-height: 1.5;
+	padding: 10px;
+	outline: none;
+    border: 1.25rem solid #ffffff;
+	background-color: #f5f6fa;
+	border-radius: 5px;
+}
+
+.modalBox {
+	margin: 0 auto;
+	width: 500px;
+	background: #fff;
+	text-align: center;
+	border: 2px solid #C0392B;
+	border-radius: 10px;
+	padding: 20px;
+	line-height: 1.5;
+}
+
+.modalBox h1{
+	font-size: 35px;
+	text-align: center;
+	font-weight: 100;
+}
+
+.modalBox p {
+	font-size: 18px;
+	text-align: center;
+	font-weight: 100;
+	padding: 20px 0;
+}
+
+.modalBox button {
+	outline: none;
+	padding: 15px;
+	border-style: none;
+	cursor: pointer;
+	font-size: 18px;
+	border-radius: 5px;
+	background: #22A7F0;
+	border: 2px solid transparent;
+	color: #fff;
+	font-weight: 100;
+}
+
+.modalBox button:hover {
+	background: #fff;
+	border: 2px solid #22A7F0;
+	color: #22A7F0;
+	transition: 0.2s;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700;800&amp;display=swap");
 body {
   font-family: "Prompt", sans-serif;

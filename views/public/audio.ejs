@@ -17,12 +17,13 @@
 
     </div>
     <audio id="audioID" autoplay loop>
-        <source src="upload/<%= dic.audio %>" type="audio/mp3">
+        <source src="/upload/<%= dic.audio %>" type="audio/mp3">
     </audio>
 
 <script>
     const textArea2 = document.getElementById('textArea');
     const myaudio = document.getElementById("audioID");
+    
 
     textArea2.addEventListener('input', () => {
         myaudio.play();
