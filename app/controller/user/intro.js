@@ -7,10 +7,15 @@ app.get('/', (req, res)=>{
 })
 
 app.post('/', async (req, res)=>{
-    const { fname, uname, pwd } = req.body
+    const { uname, password, fname, region, school, grade } = req.body
 
-    let r = await query('insert into users (FIO, uname, pwd) values (?,?,?)', [fname, uname, pwd])
+    // console.log(req.body)
 
+    let r = await query('insert into users (uname, password, fio, region, school, class) values (?,?,?,?,?,?);',
+        [ uname, password, fname, region, school, grade])
+
+    req.session.uid = r.insertId
+    req.session.user = uname
     res.redirect('/home')
 })
 

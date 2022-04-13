@@ -1,6 +1,6 @@
 let auth = (req, res, next) => {
-    if(!req.session.isAdmin)
-        return res.redirect('/admin/login')
+    if(!req.session.uid)
+        return res.redirect('/')
 
     next()
 }

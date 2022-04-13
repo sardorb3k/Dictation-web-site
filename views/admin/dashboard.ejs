@@ -52,14 +52,38 @@
                                         </div>
                                         <div class="nk-tb-list is-medium nk-cov-wg5-table">
                                             <div class="nk-tb-item nk-tb-head">
+                                                <div class="nk-tb-col">T/r</div>
                                                 <div class="nk-tb-col">Ism Familya</div>
+                                                <div class="nk-tb-col">Viloyat</div>
+                                                <div class="nk-tb-col">Maktab</div>
+                                                <div class="nk-tb-col">Sinf</div>
                                                 <div class="nk-tb-col text-right">Natija</div>
                                             </div>
                                             <% for (let i=0; i<arr.length; i++) { %>
                                             <div class="nk-tb-item">
                                                 <div class="nk-tb-col">
                                                     <div class="tb-country">
-                                                        <div class="name"><%= arr[i].uname %></div>
+                                                        <div class="name"><%= i + 1 %></div>
+                                                    </div>
+                                                </div>
+                                                <div class="nk-tb-col">
+                                                    <div class="tb-country">
+                                                        <div class="name"><%= arr[i].fio %></div>
+                                                    </div>
+                                                </div>
+                                                <div class="nk-tb-col">
+                                                    <div class="tb-country">
+                                                        <div class="name"><%= arr[i].region %></div>
+                                                    </div>
+                                                </div>
+                                                <div class="nk-tb-col">
+                                                    <div class="tb-country">
+                                                        <div class="name"><%= arr[i].school %></div>
+                                                    </div>
+                                                </div>
+                                                <div class="nk-tb-col">
+                                                    <div class="tb-country">
+                                                        <div class="name"><%= arr[i].class %></div>
                                                     </div>
                                                 </div>
                                                 <div class="nk-tb-col text-right">
