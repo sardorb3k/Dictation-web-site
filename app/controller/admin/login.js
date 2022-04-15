@@ -11,14 +11,15 @@ app.post('/', (req, res)=>{
 
     const h = req.body
 
-    console.log(req.body)
+    // console.log(req.body)
 
     if(h.uname === uname && h.pwd === password){
         req.session.isAdmin = true
+        req.session.uid = uname
 
         return res.redirect('/admin/')
     }
-
+    // console.log(h)
     res.redirect('/')
 })
 

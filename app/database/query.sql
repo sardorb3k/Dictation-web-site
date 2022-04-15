@@ -29,3 +29,10 @@ create table users(
                       school varchar(50),
                       class varchar(50)
 );
+
+-- documents table
+create table docs(
+                     id int primary key auto_increment,
+                     docName varchar(100),
+                     docLink varchar(200)
+);

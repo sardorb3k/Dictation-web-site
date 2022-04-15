@@ -10,4 +10,6 @@ app.use(['/home', '/'], auth, require('../../controller/admin/home'))
 
 app.use('/dictation', auth, require('../../controller/admin/dic'))
 
+app.use('/docs', auth, require('../../controller/admin/docs'))
+
 module.exports = app
