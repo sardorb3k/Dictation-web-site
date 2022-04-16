@@ -46,6 +46,9 @@ app.post('/' , async (req, res)=>{
     let inputArr = input.split(' ')
     let resultArr = result.split(' ')
 
+    // console.log(inputArr)
+    // console.log(resultArr)
+
     for(let i=0; i<resultArr.length; i++){
         if(inputArr[i] === null){
             mistake += resultArr.length - i
@@ -69,7 +72,7 @@ app.post('/' , async (req, res)=>{
 
     await query('insert into Scores (uname, score, did) value(?,?,?)', [uname, score, id])
 
-    // console.log("Urra")
+    // console.log(score)
 
     res.render('./public/end', {
         score
