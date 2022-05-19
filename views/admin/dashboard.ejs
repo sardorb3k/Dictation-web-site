@@ -50,7 +50,7 @@
                                                 </div>
                                                 <form action="admin/home" method="get" class="card-title mb-0">
                                                     <div class="card-title mb-0">
-                                                        <select name="region" id="region" onchange="this.form.submit()">
+                                                        <select name="region" id="region">
                                                             <option value="" selected>Viloyat</option>
                                                             <% for (var i = 0; i < sendReg.length; i++) { %>
                                                                 <option value="<%= sendReg[i].region%>"><%= sendReg[i].region%></option>
@@ -58,7 +58,7 @@
                                                         </select>
                                                     </div>
                                                     <div class="card-title mb-0">
-                                                        <select name="school" id="school" onchange="this.form.submit()">
+                                                        <select name="school" id="school">
                                                             <option value="" selected>Maktab</option>
                                                             <% for (var i = 0; i < sendSch.length; i++) { %>
                                                                 <option value="<%= sendSch[i].school%>"><%= sendSch[i].school%></option>
@@ -66,13 +66,14 @@
                                                         </select>
                                                     </div>
                                                     <div class="card-title mb-0">
-                                                        <select name="class" id="class" onchange="this.form.submit()">
+                                                        <select name="class" id="class">
                                                             <option value="" selected>Sinf</option>
                                                             <% for (var i = 0; i < sendCl.length; i++) { %>
                                                                 <option value="<%= sendCl[i].class%>"><%= sendCl[i].class%></option>
                                                             <% }%>
                                                         </select>
                                                     </div>
+                                                    <button class="form-control" type="submit">Qidirish</button>
                                                 </form>
                                             </div>
                                         </div>
