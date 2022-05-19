@@ -7,14 +7,15 @@ function randomIntFromInterval(min, max) { // min and max included
 }
 
 app.get('/', async (req, res)=>{
-    // console.log(req.query.uname);
-    let count = await query('select count(*) as count from Dictionary')
-    count = count[0].count
+    // console.log(req.query);
+    // let count = await query('select count(*) as count from Dictionary')
+    // count = count[0].count
+    //
+    // count = randomIntFromInterval(1, count)
 
-    count = randomIntFromInterval(1, count)
-
+    let did = req.query.dictation
     let user = req.query.uname
-    let dic = await query('select * from Dictionary where id = ?', [count])
+    let dic = await query('select * from Dictionary where id = ?', [did])
     dic = dic[0]
 
     // console.log(dic);

@@ -24,6 +24,13 @@
                 </div>
 
                 <div class="form-group">
+                    <p>Diktant mavzusini tanlang:</p>
+                    <select name="dictation" id="dictation" class="form-control form-control-color">
+                        <% for (let i = 0; i < dic.length; i++) { %>
+                            <option value="<%= dic[0].id %>"><%= dic[0].header %></option>
+                        <% } %>
+                    </select>
+                    <br><br>
                     <label class="form-label">Tanlov</label>
                     <div class="form-control-wrap">
                         <ul class="custom-control-group g-3 align-center flex-wrap">

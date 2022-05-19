@@ -36,3 +36,16 @@ create table docs(
                      docName varchar(100),
                      docLink varchar(200)
 );
+
+alter table Dictionary
+    add column class varchar(50) after header;
+
+
+create procedure sp_getDicByClass(in uid int)
+begin
+    select * from Dictionary
+    where class in (
+        select school from users
+        where id = uid
+    );
+end;

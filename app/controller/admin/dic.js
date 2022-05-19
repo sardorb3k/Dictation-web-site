@@ -12,16 +12,16 @@ app.get('/', async (req, res)=>{
 })
 
 app.post('/', require('../../middlewares/upload'), async (req, res)=>{
-    const { id,  header, author, txt } = req.body
+    const { id,  header, className, author, txt } = req.body
 
     if(id != 0){
         if(req.lfile == '/')
-            await query('update Dictionary set header = ?, text = ?, author = ? where id = ?', [header, txt, author, id])
+            await query('update Dictionary set header = ?, class = ?, text = ?, author = ? where id = ?', [header, className, txt, author, id])
         else
-            await query('update Dictionary set header = ?, text = ?, audio = ?, author = ? where id = ?', [header, txt, req.lfile, author, id])
+            await query('update Dictionary set header = ?, class = ?, text = ?, audio = ?, author = ? where id = ?', [header, className, txt, req.lfile, author, id])
     }
     else
-        await query("insert into Dictionary (header, text, audio, author) values (?,?,?,?)", [header, txt, req.lfile,  author])
+        await query("insert into Dictionary (header, class, text, audio, author) values (?,?,?,?,?)", [header, className, txt, req.lfile,  author])
 
 
     res.redirect('/admin/dictation')

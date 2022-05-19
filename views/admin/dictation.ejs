@@ -75,6 +75,9 @@
                                                         <span class="tb-odr-id">Sarlavha</span>
                                                     </th>
                                                     <th class="tb-odr-info">
+                                                        <span class="tb-odr-id">Sinf uchun</span>
+                                                    </th>
+                                                    <th class="tb-odr-info">
                                                         <span class="tb-odr-id">Avtor</span>
                                                     </th>
                                                     <th class="tb-odr-action">O'chirish</th>
@@ -88,6 +91,11 @@
                                                     <td class="tb-odr-info">
                                                                 <span class="tb-odr-id"><a
                                                                             href="#create" onclick="editFunForm('<%= i %>')" data-toggle="modal"><%= arr[i].header %></a>
+                                                                </span>
+                                                    </td>
+                                                    <td class="tb-odr-info">
+                                                                <span class="tb-odr-id">
+                                                                    <%= arr[i].class %>
                                                                 </span>
                                                     </td>
                                                     <td class="tb-odr-info">
@@ -174,6 +182,17 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="form-label" for="author">Sinf uchun:</label>
+                        <div class="form-control-wrap">
+                            <select class="form-control" name="className" id="class">
+                                <option value="1-sinf">1-sinf</option>
+                                <option value="2-sinf">2-sinf</option>
+                                <option value="3-sinf">3-sinf</option>
+                                <option value="4-sinf">4-sinf</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label class="form-label" for="author">Muallif</label>
                         <div class="form-control-wrap">
                             <input name="author" type="text" class="form-control" id="author">
@@ -221,8 +240,9 @@
         let frm = document.getElementById("tab-" + data);
         document.getElementById("id").value = frm.children[0].innerText
         document.getElementById("header").value = frm.children[2].innerText
-        document.getElementById("author").value = frm.children[3].innerText
-        document.getElementById("text").value = frm.children[4].innerText
+        document.getElementById("class").value = frm.children[3].innerText
+        document.getElementById("author").value = frm.children[4].innerText
+        document.getElementById("text").value = frm.children[5].innerText
     }
 </script>
 
@@ -230,6 +250,7 @@
     let clearItem = () => {
         document.getElementById("id").value = 0
         document.getElementById("header").value = ""
+        document.getElementById("class").value = ""
         document.getElementById("author").value = ""
         document.getElementById("text").value = ""
     }
