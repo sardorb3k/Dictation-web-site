@@ -27,7 +27,7 @@
                     <p>Diktant mavzusini tanlang:</p>
                     <select name="dictation" id="dictation" class="form-control form-control-color">
                         <% for (let i = 0; i < dic.length; i++) { %>
-                            <option value="<%= dic[0].id %>"><%= dic[0].header %></option>
+                            <option value="<%= dic[i].id %>"><%= dic[i].header %></option>
                         <% } %>
                     </select>
                     <br><br>
